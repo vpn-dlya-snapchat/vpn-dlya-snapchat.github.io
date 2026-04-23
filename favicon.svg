@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFC00"/>
+      <stop offset="100%" stop-color="#FFD600"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7B6CF5"/>
+      <stop offset="100%" stop-color="#5C4AC7"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="0.6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- Yellow background -->
+  <rect width="32" height="32" rx="7" fill="url(#bg)"/>
+  <!-- Ghost body: rounded top, wavy bottom hem -->
+  <path d="M16 5
+    C10.5 5 8 9.5 8 15
+    L8 27
+    L10.2 25.2
+    L12.4 27
+    L14.6 25.2
+    L16.8 27
+    L19 25.2
+    L21.2 27
+    L23.2 25.4
+    L24 15
+    C24 9.5 21.5 5 16 5 Z"
+    fill="white" filter="url(#glow)"/>
+  <!-- Eyes -->
+  <circle cx="13" cy="15.5" r="2" fill="#1A1A1A"/>
+  <circle cx="19" cy="15.5" r="2" fill="#1A1A1A"/>
+  <!-- Eye shine -->
+  <circle cx="13.8" cy="14.7" r="0.75" fill="white"/>
+  <circle cx="19.8" cy="14.7" r="0.75" fill="white"/>
+  <!-- Shield badge (bottom-right corner) -->
+  <path d="M22 23 L19.5 24 L19.5 26.5 Q22 28 24.5 26.5 L24.5 24 Z"
+    fill="url(#shield)" opacity="0.95" filter="url(#glow)"/>
+  <!-- Lock in shield -->
+  <circle cx="22" cy="24.8" r="0.8" fill="white"/>
+  <rect x="21.45" y="25.3" width="1.1" height="1" rx="0.2" fill="white"/>
+</svg>
